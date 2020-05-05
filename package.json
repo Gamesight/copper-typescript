@@ -1,0 +1,29 @@
+{
+  "name": "@Gamesight/copper-typescript",
+  "version": "0.0.1",
+  "description": "Typescript Library for Copper CRM API",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "copper",
+    "crm",
+    "typescript",
+    "sdk"
+  ],
+  "author": "dylan@gamesight.io",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "typescript": "^3.8.3"
+  }
+}

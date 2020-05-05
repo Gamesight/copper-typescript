@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017"],
+    "target": "es2017",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist/",
+    "skipLibCheck": true,
+    "types": ["node", "node-fetch"],
+    "paths": {
+      "@src/*" : ["./src/*"],
+      "@test/*": ["./test/*"],
+      "@dist/*": ["./dist/*"]
+    }
+  },
+  "include": ["src"]
+}
