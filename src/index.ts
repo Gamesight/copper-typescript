@@ -29,7 +29,7 @@ export default class Copper {
   }
 
   async copperRequest<T>(url: string, method: string, params?: any): Promise<T> {
-    let data: any = {
+    const data: any = {
       method,
       headers: this.headers
     }
@@ -52,7 +52,7 @@ export default class Copper {
   }
   async listAllLeads(): Promise<Lead[]> {
     return new Promise<Lead[]>(async (resolve, reject)=>{
-      let data = {
+      const data = {
         page_number: 1,
         page_size: 200
       }
@@ -121,7 +121,7 @@ export default class Copper {
   }
   async listAllCompanies(): Promise<Company[]> {
     return new Promise<Company[]>(async (resolve, reject)=>{
-      let data = {
+      const data = {
         page_number: 1,
         page_size: 200
       }
