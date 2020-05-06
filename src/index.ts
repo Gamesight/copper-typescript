@@ -34,7 +34,7 @@ export default class Copper {
       headers: this.headers
     }
     if(params) data.body = JSON.stringify(params)
-    return await fetch(url, data).then((res: any)=>res.json())
+    return fetch(url, data).then((res: any)=>res.json())
   }
 
   // Leads
