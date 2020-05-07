@@ -1,6 +1,6 @@
 {
   "name": "@Gamesight/copper-typescript",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Typescript Library for Copper CRM API",
   "main": "dist/index.js",
   "files": [
@@ -16,7 +16,8 @@
     "copper",
     "crm",
     "typescript",
-    "sdk"
+    "lib",
+    "api"
   ],
   "author": "dylan@gamesight.io",
   "license": "ISC",
