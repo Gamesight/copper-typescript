@@ -4,7 +4,11 @@
 ## Install
 
 ```sh
-npm install github:Gamesight/copper-typescript
+# Tell npm to use the Github package repository
+echo registry=https://npm.pkg.github.com/gamesight > .npmrc
+
+# Install the package
+npm install @gamesight/copper-typescript
 ```
 
 ## Usage
