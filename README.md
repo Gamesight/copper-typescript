@@ -2,6 +2,7 @@
 > A lightweight Typescript library for Copper CRM API -> https://developer.copper.com/
 
 ## Install
+If this is your first time using the Github package repository, you must [auth](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-packages)
 
 ```sh
 # Tell npm to use the Github package repository
