@@ -73,7 +73,7 @@ export class Copper {
     return this.copperRequest<Lead>(`${URL}/leads/upsert`, "put", {properties: lead, match})
   }
   deleteLead(id: number): Promise<DeleteResponse> {
-    return this.copperRequest<DeleteResponse>(`${URL}/leads/${id}`, "put")
+    return this.copperRequest<DeleteResponse>(`${URL}/leads/${id}`, "delete")
   }
   deleteLeads(ids: number[]): Promise<DeleteResponse[]> {
     return Promise.all(ids.map((id: number)=>this.deleteLead(id)))
