@@ -208,7 +208,20 @@ export class Copper {
   listTasks(params: any = {}): Promise<Task[]> {
     return this.copperRequest<Task[]>(`${URL}/tasks/search`, "post", params)
   }
-
+  listAllTasks(): Promise<Task[]> {
+    return new Promise<Task[]>(async (resolve, reject)=>{
+      const data = {
+        page_number: 1,
+        page_size: 200
+      }
+      let tasks: Task[] = []
+      while(tasks.length % data.page_size == 0){
+        await this.listTasks(data).then((new_tasks: [])=>tasks = tasks.concat(new_tasks))
+        data.page_number++
+      }
+      return resolve(tasks)
+    })
+  }
 
   // Activities
   fetchActivityById(id: number): Promise<Activity> {
