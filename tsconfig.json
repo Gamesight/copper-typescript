@@ -14,7 +14,9 @@
       "@src/*" : ["./src/*"],
       "@test/*": ["./test/*"],
       "@dist/*": ["./dist/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "declaration": true
   },
   "include": ["src"]
 }
