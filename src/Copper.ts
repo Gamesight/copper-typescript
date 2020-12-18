@@ -95,6 +95,20 @@ export class Copper {
   listPeople(params: any = {}): Promise<Person[]> {
     return this.copperRequest<Person[]>(`${URL}/people/search`, "post", params)
   }
+  listAllPeople(): Promise<Person[]> {
+    return new Promise<Task[]>(async (resolve, reject)=>{
+      const data = {
+        page_number: 1,
+        page_size: 200
+      }
+      let people: Person[] = []
+      while(people.length % data.page_size == 0){
+        await this.listPeople(data).then((new_tasks: [])=>people = people.concat(new_tasks))
+        data.page_number++
+      }
+      return resolve(people)
+    })
+  }
   listPersonActivities(id: number, params: any = {}): Promise<any[]> {
     return this.copperRequest<any[]>(`${URL}/people/${id}/activities`, "post", params)
   }
@@ -158,6 +172,20 @@ export class Copper {
   }
   listOpportunities(params: any = {}): Promise<Opportunity[]> {
     return this.copperRequest<Opportunity[]>(`${URL}/opportunities/search`, "post", params)
+  }
+  listAllOpportunities(): Promise<Opportunity[]> {
+    return new Promise<Opportunity[]>(async (resolve, reject)=>{
+      const data = {
+        page_number: 1,
+        page_size: 200
+      }
+      let opportunities: Opportunity[] = []
+      while(opportunities.length % data.page_size == 0){
+        await this.listOpportunities(data).then((new_opportunities: [])=>opportunities = opportunities.concat(new_opportunities))
+        data.page_number++
+      }
+      return resolve(opportunities)
+    })
   }
   listCustomerSources(): Promise<any[]> {
     return this.copperRequest<any[]>(`${URL}/customer_sources`, "get")
