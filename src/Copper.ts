@@ -347,7 +347,7 @@ export class Copper {
 
   // Util
   nameToCustomFieldId(name: string, fields: CustomField[]): number {
-    const field: CustomField = fields.find((field: CustomField)=>field.name.toLowerCase().includes(name.toLowerCase()))
+    const field: CustomField = fields.find((field: CustomField)=>field.name.toLowerCase() === name.toLowerCase())
     if(!field) throw new Error("Field not found")
     return field.id
   }
