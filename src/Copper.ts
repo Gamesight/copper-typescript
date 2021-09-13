@@ -8,7 +8,7 @@ import { Task } from './Tasks'
 import { Activity } from './Activities'
 import { Subscription, Relation, Connection, CustomActivityType, CustomField, ListCustomFieldRequestParams, DeleteResponse } from './CustomFields'
 
-const URL: string = "https://api.prosperworks.com/developer_api/v1"
+const URL: string = "https://api.copper.com/developer_api/v1"
 
 interface CopperHeaders {
   "X-PW-AccessToken": string

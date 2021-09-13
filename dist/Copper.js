@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const node_fetch_1 = require("node-fetch");
-const URL = "https://api.prosperworks.com/developer_api/v1";
+const URL = "https://api.copper.com/developer_api/v1";
 class Copper {
     constructor(access_token, email) {
         this.headers = {
